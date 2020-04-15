@@ -1,0 +1,10 @@
+{
+    "date": "Wed Apr 15 22:06:25 CEST 2020",
+    "name": "Trello2Redmine",
+    "format": "xml",
+    "description": "",
+    "files": ["Trello2Redmine.xml"],
+    "repository": {},
+    "version": "0.1",
+    "dependencies": [{"Simplicite": "4.0"}]
+}
