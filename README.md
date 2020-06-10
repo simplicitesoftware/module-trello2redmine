@@ -11,7 +11,27 @@
 `Trello2Redmine` module definition
 ==================================
 
+### Introduction
 
+This is a basic tool to facilitats project migration from Trello Boards to a Redmine instance.
+
+### Import
+
+To import this module:
+
+- Create a module named `Trello2Redmine`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-trello2redmine.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
 
 `TrdConfig` business object definition
 --------------------------------------

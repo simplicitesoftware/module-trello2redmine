@@ -1,10 +1,10 @@
 {
-    "date": "Wed Apr 15 22:06:25 CEST 2020",
+    "date": "Wed Jun 10 11:58:33 CEST 2020",
     "name": "Trello2Redmine",
     "format": "xml",
-    "description": "",
+    "description": "### Introduction\n\nThis is a basic tool to facilitats project migration from Trello Boards to a Redmine instance.\n\n### Import\n\nTo import this module:\n\n- Create a module named `Trello2Redmine`\n- Set the settings as:\n\n```json\n{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-trello2redmine.git\"\n\t}\n}\n```\n\n- Click on the _Import module_ button",
     "files": ["Trello2Redmine.xml"],
-    "repository": {},
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-trello2redmine.git"}},
     "version": "0.1",
     "dependencies": [{"Simplicite": "4.0"}]
 }
