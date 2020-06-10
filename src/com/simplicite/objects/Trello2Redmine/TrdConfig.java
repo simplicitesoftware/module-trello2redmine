@@ -31,11 +31,13 @@ public class TrdConfig extends ObjectDB {
 		public String key;
 		public int user;
 		public int project;
+		public String url;
 		
-		public RedmineConfig(String rdKey, int rdUser, int proj){
+		public RedmineConfig(String rdUrl, String rdKey, int rdUser, int proj){
 			key = rdKey;
 			user = rdUser;
 			project = proj;
+			url = rdUrl;
 		}
 	}
 	
@@ -49,6 +51,7 @@ public class TrdConfig extends ObjectDB {
 	
 	private RedmineConfig getRedmineConfig(){
 		return new RedmineConfig(
+			getFieldValue("trdCgfRedmineInstanceUrl"),
 			getFieldValue("trdCgfRedmineKey"),
 			getField("trdCgfRedmineUser").getInt(0),
 			getField("trdCgfRedmineProject").getInt(0)
@@ -99,11 +102,11 @@ public class TrdConfig extends ObjectDB {
 	
 	private void createRedmineIssue(JSONObject issue, RedmineConfig redmine) throws Exception{
 		AppLog.info(getClass(), "createRedmineIssue", issue.toString(), null);
-		Tool.readUrl("https://projects.simplicite.io/issues.json?key="+redmine.key, issue);
+		Tool.readUrl(redmine.url+"/issues.json?key="+redmine.key, issue);
 	}
 	
 	private int getVersionId(String listName, RedmineConfig redmine) throws Exception{
-		JSONObject rep = new JSONObject(Tool.readUrl("https://projects.simplicite.io/projects/"+redmine.project+"/versions.json?key="+redmine.key));
+		JSONObject rep = new JSONObject(Tool.readUrl(redmine.url+"/projects/"+redmine.project+"/versions.json?key="+redmine.key));
 		
 		JSONArray versions = rep.getJSONArray("versions");
 		for(int i = 0; i < versions.length(); i++){

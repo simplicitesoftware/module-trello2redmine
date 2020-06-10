@@ -25,6 +25,9 @@ components:
     TrdConfig:
       type: object
       properties:
+        trdCgfRedmineInstanceUrl:
+          description: Redmine Instance URL
+          type: string
         trdCgfRedmineKey:
           description: Redmine Key
           type: string
@@ -453,6 +456,12 @@ paths:
         in: query
         name: trdCgfDescription
         description: Search filter for Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: trdCgfRedmineInstanceUrl
+        description: Search filter for Redmine Instance URL
         required: false
       tags:
       - TrdConfig

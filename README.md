@@ -29,6 +29,7 @@
 | `trdCgfRedmineUser`                                          | int(3)                                   | yes      | yes       |          | -                                                                                |
 | `trdCgfRedmineProject`                                       | int(3)                                   | yes      | yes       |          | -                                                                                |
 | `trdCgfDescription`                                          | char(255)                                | yes*     | yes       |          | -                                                                                |
+| `trdCgfRedmineInstanceUrl`                                   | url(255)                                 |          | yes       |          | -                                                                                |
 
 ### Custom actions
 

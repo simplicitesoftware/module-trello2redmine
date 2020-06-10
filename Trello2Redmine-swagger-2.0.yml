@@ -284,6 +284,11 @@ paths:
         description: Search filter for Description
         type: string
         required: false
+      - in: query
+        name: trdCgfRedmineInstanceUrl
+        description: Search filter for Redmine Instance URL
+        type: string
+        required: false
       tags:
       - TrdConfig
   /:
@@ -337,6 +342,9 @@ definitions:
   TrdConfig:
     type: object
     properties:
+      trdCgfRedmineInstanceUrl:
+        description: Redmine Instance URL
+        type: string
       trdCgfRedmineKey:
         description: Redmine Key
         type: string
