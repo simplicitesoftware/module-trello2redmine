@@ -93,17 +93,17 @@
 	<data>
 		<fld_name>trdCgfRedmineKey</fld_name>
 		<fld_dbname>trd_cgf_redmine_key</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>1</fld_required>
 		<fld_fonctid>0</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
+		<fld_research/>
+		<fld_researchreq/>
 		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_type>3</fld_type>
+		<fld_type>9</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
 		<fld_list_id.lov_name/>
@@ -237,17 +237,17 @@
 	<data>
 		<fld_name>trdCgfTrelloKey</fld_name>
 		<fld_dbname>trd_cgf_trello_key</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>1</fld_required>
 		<fld_fonctid>0</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
+		<fld_research/>
+		<fld_researchreq/>
 		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_type>3</fld_type>
+		<fld_type>9</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
 		<fld_list_id.lov_name/>
@@ -273,17 +273,17 @@
 	<data>
 		<fld_name>trdCgfTrelloToken</fld_name>
 		<fld_dbname>trd_cgf_trello_token</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>1</fld_required>
 		<fld_fonctid>0</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
+		<fld_research/>
+		<fld_researchreq/>
 		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_type>3</fld_type>
+		<fld_type>9</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
 		<fld_list_id.lov_name/>
@@ -374,7 +374,7 @@
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name/>
 		<obd_nohome>1</obd_nohome>
-		<obd_icon/>
+		<obd_icon>img/color/pipelines</obd_icon>
 		<obd_order>1000</obd_order>
 		<obd_domain_id.obd_name/>
 		<row_module_id.mdl_name>Trello2Redmine</row_module_id.mdl_name>
@@ -412,7 +412,7 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon/>
+		<obo_icon>img/color/pipelines</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
 		<obo_viewmode>T</obo_viewmode>
@@ -479,7 +479,7 @@
 	<data>
 		<obf_object_id.obo_name>TrdConfig</obf_object_id.obo_name>
 		<obf_field_id.fld_name>trdCgfTrelloToken</obf_field_id.fld_name>
-		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_field_id.fld_type>9</obf_field_id.fld_type>
 		<obf_order>20</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
@@ -508,7 +508,7 @@
 	<data>
 		<obf_object_id.obo_name>TrdConfig</obf_object_id.obo_name>
 		<obf_field_id.fld_name>trdCgfTrelloKey</obf_field_id.fld_name>
-		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_field_id.fld_type>9</obf_field_id.fld_type>
 		<obf_order>30</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
@@ -537,7 +537,7 @@
 	<data>
 		<obf_object_id.obo_name>TrdConfig</obf_object_id.obo_name>
 		<obf_field_id.fld_name>trdCgfRedmineKey</obf_field_id.fld_name>
-		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_field_id.fld_type>9</obf_field_id.fld_type>
 		<obf_order>40</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
@@ -762,6 +762,45 @@
 	</data>
 </object>
 <object>
+	<name>ObjectCtxHelp</name>
+	<action>upsert</action>
+	<data>
+		<och_object_id.obo_name>TrdConfig</och_object_id.obo_name>
+		<och_context>L;C;U;D</och_context>
+		<och_lang>ENU</och_lang>
+		<och_help><![CDATA[<p>Tool to copy all Trello cards from a given Trello board to a given Simplicit&eacute; Redmine Project (this is specific to <a href="https://projects.simplicite.io">https://projects.simplicite.io</a>).</p>
+<p>Only trello columns starting by "v" (v0.1, v0.2 etc) will be copied, and <strong>the same versions must be created beforehand</strong> in Redmine (Project Configuration &gt; Versions)</p>
+<ul>
+<li><strong>Copied</strong> : name, description (with card URL for reference)</li>
+<li><strong>Assigned</strong> : tracker, priority, user, project</li>
+<li><strong>Ignored</strong> : attachements, comments, checklists, etc.</li>
+</ul>]]></och_help>
+		<row_module_id.mdl_name>Trello2Redmine</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Resource</name>
+	<action>upsert</action>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>trd-module-screenshot</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/trd-module-screenshot.png</res_image>
+		<row_module_id.mdl_name>Trello2Redmine</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>TranslateAction</name>
 	<action>upsert</action>
 	<data>
@@ -801,7 +840,7 @@
 		<tsl_id.fld_name>trdCgfRedmineKey</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Redmine Key</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_simplehelp><![CDATA[<p>Find it out in the panel, "API" action, at https://projects.simplicite.io/my/account</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>
@@ -812,8 +851,8 @@
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>trdCgfRedmineProject</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Redmine Project</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_value>Redmine Project ID</tsl_value>
+		<tsl_simplehelp><![CDATA[<p>Find it out at <a href="https://projects.simplicite.io/projects.xml">https://projects.simplicite.io/projects.xml</a> (log in with your user credentials)</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>
@@ -824,8 +863,8 @@
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>trdCgfRedmineUser</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Redmine User</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_value>Redmine User ID</tsl_value>
+		<tsl_simplehelp><![CDATA[<p>Find it out in the address bar after clicking on your username anywhere in https://projects.simplicite.io</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>
@@ -837,7 +876,7 @@
 		<tsl_id.fld_name>trdCgfTrelloBoard</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Trello Board</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_simplehelp><![CDATA[<p>In Trello, find the "key" part of the trello board URL</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>
@@ -849,7 +888,7 @@
 		<tsl_id.fld_name>trdCgfTrelloKey</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Trello Key</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_simplehelp><![CDATA[<p><a href="https://trello.com/app-key">https://trello.com/app-key</a> (see <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/">https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/</a> )</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>
@@ -861,7 +900,7 @@
 		<tsl_id.fld_name>trdCgfTrelloToken</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Trello Token</tsl_value>
-		<tsl_simplehelp/>
+		<tsl_simplehelp><![CDATA[<p><a href="https://trello.com/app-key">https://trello.com/app-key</a> =&gt; generate token</p>]]></tsl_simplehelp>
 		<tsl_short_value/>
 		<tsl_placeholder/>
 		<tsl_listhelp/>

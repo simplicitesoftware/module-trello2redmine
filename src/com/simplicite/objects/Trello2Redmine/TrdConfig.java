@@ -26,7 +26,8 @@ public class TrdConfig extends ObjectDB {
 	private class RedmineConfig {
 		public static final int RED_TRACKER_FEATURE = 2;
 		public static final int RED_TRACKER_BUG = 1;
-		public static final int RED_PRIORITY = 4;
+		public static final int RED_PRIORITY = 2;
+		public static final int RED_STATUS_CLOSED = 5;
 		public String key;
 		public int user;
 		public int project;
@@ -40,17 +41,17 @@ public class TrdConfig extends ObjectDB {
 	
 	private TrelloConfig getTrelloConfig(){
 		return new TrelloConfig(
-			getFieldValue("trdCfgTrelloBoard"),
-			getFieldValue("trdCfgTrelloToken"),
-			getFieldValue("trdCfgTrelloKey")
+			getFieldValue("trdCgfTrelloBoard"),
+			getFieldValue("trdCgfTrelloToken"),
+			getFieldValue("trdCgfTrelloKey")
 		);
 	}
 	
 	private RedmineConfig getRedmineConfig(){
 		return new RedmineConfig(
-			getFieldValue("trdCfgRedmineKey"),
-			getField("trdCfgRedmineUser").getInt(0),
-			getField("trdCfgRedmineProject").getInt(0)
+			getFieldValue("trdCgfRedmineKey"),
+			getField("trdCgfRedmineUser").getInt(0),
+			getField("trdCgfRedmineProject").getInt(0)
 		);
 	}
 	
@@ -75,13 +76,15 @@ public class TrdConfig extends ObjectDB {
 					redmineItem.put("project_id", redmine.project);
 					redmineItem.put("subject", card.getString("name"));
 					redmineItem.put("priority_id", redmine.RED_PRIORITY);
+					redmineItem.put("status_id", redmine.RED_STATUS_CLOSED);
 					redmineItem.put("tracker_id", card.getString("name").contains("ANO") ? redmine.RED_TRACKER_BUG : redmine.RED_TRACKER_FEATURE);
 					redmineItem.put("assigned_to_id", redmine.user);
 					redmineItem.put("fixed_version_id", getVersionId(listName, redmine));
+					redmineItem.put("description", card.getString("shortUrl")+"\n\n"+card.getString("desc"));
 					
 					JSONObject issue = new JSONObject();
 					issue.put("issue", redmineItem);
-					
+
 					createRedmineIssue(issue, redmine);
 				}
 			}
@@ -96,7 +99,7 @@ public class TrdConfig extends ObjectDB {
 	
 	private void createRedmineIssue(JSONObject issue, RedmineConfig redmine) throws Exception{
 		AppLog.info(getClass(), "createRedmineIssue", issue.toString(), null);
-		//Tool.readUrl("https://projects.simplicite.io/issues.json?key="+redmine.key, issue);
+		Tool.readUrl("https://projects.simplicite.io/issues.json?key="+redmine.key, issue);
 	}
 	
 	private int getVersionId(String listName, RedmineConfig redmine) throws Exception{

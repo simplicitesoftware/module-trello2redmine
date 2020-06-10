@@ -29,13 +29,13 @@ components:
           description: Redmine Key
           type: string
         trdCgfRedmineProject:
-          description: Redmine Project
+          description: Redmine Project ID
           type: integer
         row_id:
           description: Unique technical row ID
           type: string
         trdCgfRedmineUser:
-          description: Redmine User
+          description: Redmine User ID
           type: integer
         trdCgfDescription:
           description: Description
@@ -440,13 +440,13 @@ paths:
           type: integer
         in: query
         name: trdCgfRedmineUser
-        description: Search filter for Redmine User
+        description: Search filter for Redmine User ID
         required: false
       - schema:
           type: integer
         in: query
         name: trdCgfRedmineProject
-        description: Search filter for Redmine Project
+        description: Search filter for Redmine Project ID
         required: false
       - schema:
           type: string

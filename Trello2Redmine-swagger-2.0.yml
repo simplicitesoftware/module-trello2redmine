@@ -271,12 +271,12 @@ paths:
         required: false
       - in: query
         name: trdCgfRedmineUser
-        description: Search filter for Redmine User
+        description: Search filter for Redmine User ID
         type: integer
         required: false
       - in: query
         name: trdCgfRedmineProject
-        description: Search filter for Redmine Project
+        description: Search filter for Redmine Project ID
         type: integer
         required: false
       - in: query
@@ -341,13 +341,13 @@ definitions:
         description: Redmine Key
         type: string
       trdCgfRedmineProject:
-        description: Redmine Project
+        description: Redmine Project ID
         type: integer
       row_id:
         description: Unique technical row ID
         type: string
       trdCgfRedmineUser:
-        description: Redmine User
+        description: Redmine User ID
         type: integer
       trdCgfDescription:
         description: Description
